@@ -17,6 +17,7 @@ public class MineMods {
     public static final String MOD_ID = "minemods";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+    // Very Important Comment
 
     public MineMods() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
