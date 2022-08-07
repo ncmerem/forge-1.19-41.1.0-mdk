@@ -1,6 +1,7 @@
 package me.ncmerem.minemods;
 
 import com.mojang.logging.LogUtils;
+import me.ncmerem.minemods.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +22,8 @@ public class MineMods {
 
     public MineMods() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
